@@ -1,0 +1,33 @@
+{
+  "name": "lab2_green",
+  "version": "1.0.0",
+  "description": "Text",
+  "main": "script.js",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "resolutions": {
+    "d2/left-pad": "1.1.1",
+    "c/**/left-pad": "^1.1.2",
+    "flow-typed/semver": "7.1.3"
+  },
+  "devDependencies": {
+    "less": "^4.1.1"
+  },
+  "scripts": {
+    
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/parcel-bundler/bin/cli.js index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stas-afk47/Lab2_Green.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stas-afk47/Lab2_Green/issues"
+  },
+  "homepage": "https://github.com/Stas-afk47/Lab2_Green#readme"
+  
+}
