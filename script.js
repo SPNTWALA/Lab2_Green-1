@@ -1,4 +1,12 @@
+
 function handler (){
-    document.getElementsByName ('Coordinates') [0]
-    alert ('hello')
+    //alert ('hello'); 
+    let Name = document.getElementById("btn").value;
+    alert (Name); 
 }
+window.handler = handler;
+/*
+btn.onclick = handler;
+btn.onblur = handler;
+btn.onchange = handler;
+*/
