@@ -1,8 +1,8 @@
 
 function handler (){
-    //alert ('hello'); 
-    let Name = document.getElementById("btn").value;
-    alert (Name); 
+    let name = document.getElementById("btn").value;
+    //alert (name); 
+    (name == "ФИО") ? alert ("Пользователь найден,но кода пока нема") : alert ("Данного клиента нет в базе данных");
 }
 window.handler = handler;
 /*
