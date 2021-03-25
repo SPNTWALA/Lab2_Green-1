@@ -2,6 +2,11 @@ import fs from 'fs'
 const string = fs.readFileSync(__dirname + '/deposits.json', 'utf8')
 let users = JSON.parse(string);
 let user;
+for (let z=0;z<"Последний клиент";z++){
+  let zachto;
+  zachto = fs.readFileSync(__dirname + '/deposits/'+z+'.json', 'utf8')
+  //Ну и дальше код для каждого проверить имя кто-нибудь допишите я устал
+}
 
 
 function handler (){
@@ -15,7 +20,6 @@ function handler (){
       }
     }
     if (user != 0){
-      
       bank(user);
       } 
     else {
@@ -47,7 +51,7 @@ function bank(user) {
         balancechange=balancechange.toFixed(2);
         summ=balancechange;
         if (summ < 0){
-          return console.log ('Снятие с счета превысило депозит')
+          return alert ("У пользователя = "+user.Name+' снятие с счета превысит депозит'+"\n"+"Вклад не одобрен")
         }
       }
       alert("У пользователя = "+user.Name+"\n"+"Начальный вклад = "+user.summ+"\n"+"Срок вклада = "+user.length+"\n"+"Процент вклада = "+user.percent+"%"+"\n"+"Ежемесячное пополнение/снятие = "+user.monthchanges+"\n"+"Месяц вклада = "+user.month+"\n"+"Текущий баланс = "+balancechange)
@@ -64,7 +68,7 @@ function bank(user) {
         balancechange=balancechange.toFixed(2);
         summ=balancechange;
         if (summ < 0){
-          return console.log ('Снятие с счета превысило депозит')
+          return alert ("У пользователя = "+user.Name+' снятие с счета превысит депозит'+"\n"+"Вклад не одобрен")
         }
       }
       alert ("Вклад закрыт"+"\n"+"Пользователь = "+user.Name+"\n"+"Начальный вклад = "+user.summ+"\n"+"Срок вклада = "+user.length+"\n"+"Процент вклада = "+user.percent+"%"+"\n"+"Ежемесячное пополнение/снятие = "+user.monthchanges+"\n"+"Итоговая сумма = "+balancechange);
