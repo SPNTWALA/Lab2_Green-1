@@ -1,20 +1,5 @@
-import fs from 'fs'
-const string = fs.readFileSync(__dirname + '/deposits.json', 'utf8')
 let users = JSON.parse(string);
 let user;
-for (let z = 0; z < "Последний клиент"; z++){
-  let f;
-  f = fs.readFileSync(__dirname + '/deposits/'+ z +'.json', 'utf8')
-
-function showFile(input) {
-    var file = input.files[0];
-    var reader = new FileReader();
-    reader.onload = function (e) {
-        var output = document.getElementById('/deposits/' + z +'.json');   
-        output.textContent = e.target.result;
-      alert (output);
-}
-
 
 function handler (){
     let name = document.getElementById("btn").value;
@@ -81,6 +66,4 @@ function bank (user) {
       }
       alert ("Вклад закрыт" + "\n" + "Пользователь = " + user.Name + "\n" + "Начальный вклад = " + user.summ + "\n" + "Срок вклада = " + user.length + "\n" + "Процент вклада = " + user.percent + "%" + "\n" + "Ежемесячное пополнение/снятие = " + user.monthchanges + "\n" + "Итоговая сумма = " + balancechange);
     }
-  }
-}
 }
