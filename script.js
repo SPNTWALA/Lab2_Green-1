@@ -1,3 +1,6 @@
+global.Buffer = global.Buffer || require('buffer').Buffer;
+let fs = require("fs");
+let string = fs.readFileSync('deposits.json');
 let users = JSON.parse(string);
 let user;
 
@@ -22,6 +25,7 @@ function handler (){
     return user;
 }
 window.handler = handler;
+console.log('fine',window.handler);
 
 function bank (user) {
   let balancechange, summchange, percentchange;
